@@ -1,0 +1,125 @@
+
+/* Type-2 */
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #c1e5f0, #E6E6FA);
+    overflow: hidden;
+    position: relative;
+}
+
+
+@keyframes floatButterflies {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+    50% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
+    100% { transform: translateY(0) rotate(0deg); opacity: 0.8; }
+}
+
+
+body::before, body::after {
+    content: "🦋";
+    font-size: 50px;
+    position: absolute;
+    color: #e7d2dc;
+    animation: floatButterflies 4s infinite ease-in-out;
+}
+
+body::before { top: 10%; left: 15%; }
+body::after { bottom: 15%; right: 10%; }
+
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    padding: 20px;
+    background: #dad5da;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(30, 13, 30, 0.4);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(12, 0, 2, 0.5);
+}
+
+
+h2 {
+    font-size: 2.2em;
+    color: #757328;
+    margin: 15px 0;
+    text-shadow: 2px 2px 10px rgba(240, 237, 243, 0.8);
+}
+
+.gif {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+}
+
+
+.btn-group {
+    margin-top: 50px;
+    position: relative;
+    height: 40px;
+}
+
+
+button {
+    width: 150px;
+    height: inherit;
+    font-size: 1.2em;
+    border-radius: 30px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #FF69B4;
+}
+
+button.yes-btn {
+    background: #FF1493;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(255, 20, 147, 0.6);
+}
+
+button.yes-btn:hover {
+    background: #FF69B4;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 20, 147, 1);
+}
+
+
+@keyframes flutterNo {
+    0% { transform: translateX(0) rotate(0deg); }
+    25% { transform: translateX(-10px) rotate(-5deg); }
+    50% { transform: translateX(10px) rotate(5deg); }
+    75% { transform: translateX(-5px) rotate(-3deg); }
+    100% { transform: translateX(5px) rotate(3deg); }
+}
+
+button.no-btn {
+    background: rgb(240, 5, 5);
+    color: #f7f2f2;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: flutterNo 1s infinite;
+}
+
+button.no-btn:hover {
+    background: #0b0b0b;
+    color: white;
+    box-shadow: 0 4px 10px rgba(252, 3, 3, 0.6);
+} 
+
+
